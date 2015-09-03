@@ -54,7 +54,7 @@ public class GPUImageActivity extends Activity {
         public FilterRenderer(Context context) {
             mPhoto = BitmapFactory.decodeResource(context.getResources(), R.drawable.lenna);
             GPUImageGaussianBlurFilter gpuImageGaussianBlurFilter = new GPUImageGaussianBlurFilter();
-            gpuImageGaussianBlurFilter.setBlurSize(20);
+            gpuImageGaussianBlurFilter.setBlurSize(10);
             mGPUImageFilter = gpuImageGaussianBlurFilter;
         }
 

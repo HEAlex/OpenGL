@@ -15,20 +15,21 @@ import javax.microedition.khronos.opengles.GL10;
 public class TriangleActivity extends Activity implements GLSurfaceView.Renderer {
 
     private static final String TAG = "TriangleActivity";
-    private GLSurfaceView mGLSurfaceView;
 
-    private int program;
-
-    private final String vertexShaderCode =
+    private static final String VERTEX_SHADER_CODE =
             "attribute vec4 position;" +
             "void main() {" +
             "   gl_Position = position;" +
             "}";
 
-    private final String fragmentShaderCode =
+    private static final String FRAGMENT_SHADER_CODE =
             "void main() {" +
             "  gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);" +
             "}";
+
+    private GLSurfaceView mGLSurfaceView;
+
+    private int mProgram;
     private FloatBuffer mPoints;
 
     @Override
@@ -46,10 +47,10 @@ public class TriangleActivity extends Activity implements GLSurfaceView.Renderer
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         GLES20.glClearColor(1f, 1f, 0f, 0f);
 
-        program = ShaderGLUtils.loadProgram(vertexShaderCode, fragmentShaderCode);
+        mProgram = ShaderGLUtils.loadProgram(VERTEX_SHADER_CODE, FRAGMENT_SHADER_CODE);
 
-        GLES20.glBindAttribLocation(program, 0, "position");
-        GLES20.glUseProgram(program);
+        GLES20.glBindAttribLocation(mProgram, 0, "position");
+        GLES20.glUseProgram(mProgram);
 
         float[] geometry = {
                 -0.5f, -0.5f, 0f, 1f,
