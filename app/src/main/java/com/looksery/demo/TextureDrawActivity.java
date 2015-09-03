@@ -1,4 +1,4 @@
-package com.looksery.demo.texture;
+package com.looksery.demo;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -7,7 +7,6 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
-import com.looksery.demo.R;
 import com.looksery.demo.util.ShaderGLUtils;
 
 import java.nio.FloatBuffer;

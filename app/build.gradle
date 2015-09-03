@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    mavenCentral()
+}
+
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.0"
@@ -17,4 +21,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+dependencies {
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.2.3'
 }

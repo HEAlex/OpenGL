@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".texture.TextureDrawActivity"
+            android:name=".TextureDrawActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +43,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".texture.MediaFrameworkActivity"
+            android:name=".MediaFrameworkActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GPUImageActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

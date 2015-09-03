@@ -1,4 +1,4 @@
-package com.looksery.demo.texture;
+package com.looksery.demo;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.looksery.demo.R;
 import com.looksery.demo.util.DrawTextureShader;
 import com.looksery.demo.util.ShaderGLUtils;
 
